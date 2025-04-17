@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import  { useState,useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
 
@@ -10,7 +10,7 @@ const Register = () => {
     password: ''
   });
   const [data, setData] = useState([]);
-  const [isRegistered, setIsRegistered] = useState(false); 
+  // const [isRegistered, setIsRegistered] = useState(false); 
 useEffect(() => {
   const fetchData = async () => {
     try { 
@@ -45,7 +45,7 @@ console.log(data)
       const response = await axios.post('https://jsonplaceholder.typicode.com/users', formData);
       console.log('Регистрация успешна:', response.data);
       alert('Регистрация успешна!');
-      setIsRegistered(true); 
+      // setIsRegistered(true); 
     } catch (error) {
       console.error('Ошибка регистрации:', error);
       alert('Ошибка регистрации!');
